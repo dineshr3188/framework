@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TenantRegistration" verbose="2" parallel="methods" thread-count="2">
+ <parameter name="environment" value="test"/>
+ <parameter name="browser" value="chrome"/>
+  <parameter name="tenant" value="ipa"/>
+   <parameter name="userName" value="test_admin1"/>
+  <parameter name="password" value="Password#1"/>
+ 	
+ 	<test name="caseManagerTest" group-by-instances="true">
+ 	<groups>
+			<run>
+  		  	<include name="uiplusss" />		
+			</run>
+		</groups>
+		<packages>
+			<package name="org.ipa.casemanagertest.ui.commons" />
+			<package name="org.infinx.imanager.casemanager" />
+			<package name="org.ipa.casemanagertest.ui" />
+			</packages>
+	</test>
+</suite>
